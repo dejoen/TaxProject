@@ -5,7 +5,7 @@ const PropertiesDashboardContainer = ()  => {
    
     return (
         <div className="font-poppins  bg-white w-full md:w-[500px] rounded-md p-3 shadow-black shadow-md ">
-        <div className=" w-full flex gap-3 place-items-center justify-center p-3">
+        <div className=" w-full flex gap-3 place-items-center justify-evenly p-3">
             <p className="md:w-1/2 font-bold">Properties</p>
             <div className="md:w-1/2 flex text-sm gap-4 bg-backgroundGrayColor rounded-lg p-1">
             <p className=" p-1">Weekly</p>

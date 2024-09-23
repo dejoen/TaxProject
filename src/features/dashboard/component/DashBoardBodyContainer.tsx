@@ -7,7 +7,7 @@ import UserAnalytics from "./UserAnalytics";
 const DashBoardBodyContainer = () => {
      const cardContents = useDashBoardCardContentState()
     return (
-     <div className="w-full h-dvh  flex  flex-col  p-3 font-poppins bg-white overflow-y-auto">
+     <div className="w-full h-fit flex  flex-col  p-3 font-poppins bg-white overflow-y-auto">
          <div className="w-full flex flex-shrink md:flex-nowrap  md:place-items-center md:justify-center" >
             <div className="w-1/2">
                 <p>Dashboard</p>
@@ -37,7 +37,7 @@ const DashBoardBodyContainer = () => {
             ))
           }
          </div>
-         <div className="w-full md:m-3 flex gap-5 h-full mb-5 justify-center flex-wrap ">
+         <div className="w-full md:m-3 flex gap-5 h-full  justify-center flex-wrap ">
            <PropertiesDashboardContainer/>
           <UserAnalytics/>
          </div>
