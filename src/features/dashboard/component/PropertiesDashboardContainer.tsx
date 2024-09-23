@@ -5,9 +5,9 @@ const PropertiesDashboardContainer = ()  => {
    
     return (
         <div className="font-poppins  bg-white w-full md:w-[500px] rounded-md p-3 shadow-black shadow-md ">
-        <div className=" w-full flex place-items-center justify-center p-3">
-            <p className="w-1/2 font-bold">Properties</p>
-            <div className="w-1/2 flex text-sm gap-4 bg-backgroundGrayColor rounded-lg p-1">
+        <div className=" w-full flex gap-3 place-items-center justify-center p-3">
+            <p className="md:w-1/2 font-bold">Properties</p>
+            <div className="md:w-1/2 flex text-sm gap-4 bg-backgroundGrayColor rounded-lg p-1">
             <p className=" p-1">Weekly</p>
             <p className=" p-1">Monthly</p>
                 <p className="bg-white rounded-md p-1">Today</p>
@@ -25,7 +25,7 @@ const PropertiesDashboardContainer = ()  => {
         </div>
 
         
-        <div className="flex place-items-center gap-4 p-3 justify-evenly mt-2">
+        <div className="flex place-items-center  gap-4 p-3 justify-evenly mt-2">
           <div className="flex flex-col ">
             <p>25</p>
             <p className="text-textLightColor text-sm ">Totat properties</p>
@@ -40,8 +40,8 @@ const PropertiesDashboardContainer = ()  => {
           </div>
          
         </div>
-        <div className="p-3 flex">
-           <div className="w-[30%]">
+        <div className="p-3 mt-4 flex   w-full flex-wrap place-items-center justify-center">
+           <div className=" md:w-[30%] w-full flex justify-center place-content-center ">
             <PieChart/>
            </div>
            <div className="w-fit flex flex-col justify-center place-items-center gap-5">
