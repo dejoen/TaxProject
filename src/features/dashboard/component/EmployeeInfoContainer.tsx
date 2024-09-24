@@ -10,7 +10,7 @@ const EmployeeinfoContainer = ({dashBoardActiveButton,makeButtonActive}:{dashBoa
     const [dropDown,setDrown] = useState<boolean>(false)
     return (
         <div className=''>
-        <div className={`${(dashBoardActiveButton.EmployeeInfo.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }  bg-gray-400 bg-opacity-20  p-2  flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
+        <div className={`${(dashBoardActiveButton.EmployeeInfo.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }  bg-gray-400 bg-opacity-20  p-3 md:p-2  flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
           makeButtonActive('employeeInfo')
         }}>
             <img src={(dashBoardActiveButton.EmployeeInfo.isActive)? activeEmployeeIcon :inActiveEmployeeIcon}/>

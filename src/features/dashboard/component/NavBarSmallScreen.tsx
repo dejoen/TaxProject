@@ -4,12 +4,18 @@ import roundIcon from '../../../assets/dashBoardRoundIcon.svg'
  import  activeNotificationIcon from '../../../assets/notificationIcon/notificationIconActive.svg'
 import menuIcon from '../../../assets/menuIcon.svg'
  import chatNotificationIcon from '../../../assets/notificationIcon/chatNotificationIconDActive.svg'
+import useDashBoardDrawerState from '../hooks/useDashBoardDrawerState'
+
+
 
 const NavBarSmallScreen = () =>{
+   const {openDrawer} = useDashBoardDrawerState()
+   
+   
     return (
-        <div className=" flex md:hidden font-poppins w-full p-4  bg-white shadow-sm flex-col  gap-8 mt-1">
+        <div className="flex md:hidden font-poppins w-full p-4  bg-white shadow-sm flex-col  gap-10 mt-1">
 
-<div className='w-full flex'>
+<div className='w-full flex '>
 
 <div className="relative bg-primaryColor text-white p-1 rounded-md w-1/2">
    <img className="absolute right-[-20px] top-[-3px]  w-[40px]" src={roundIcon}/>
@@ -17,7 +23,9 @@ const NavBarSmallScreen = () =>{
 </div>
 
 <div className='w-1/2 flex justify-end'>
-            <img src={menuIcon}/>
+            <img src={menuIcon} onClick={()=>{
+              openDrawer()
+            }}/>
           </div>
 </div>
 
