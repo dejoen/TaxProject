@@ -2,12 +2,14 @@ import useDashBoardCardContentState from "../hooks/useDashBoardCardContentState"
 import DashBoardCard from "./DashBoardCard";
 import PropertiesDashboardContainer from "./PropertiesDashboardContainer";
 import UserAnalytics from "./UserAnalytics";
+import filterIcon from '../../../assets/filterIcon.svg'
+import calendarIcon from '../../../assets/calendarIcon.svg'
 
 
 const DashBoardBodyContainer = () => {
      const cardContents = useDashBoardCardContentState()
     return (
-     <div className="w-full h-fit flex  flex-col  p-3 font-poppins bg-white overflow-y-auto">
+     <div className="w-full h-fit flex  flex-col  p-3 font-poppins bg-[#C4C4C4] bg-opacity-5 overflow-y-auto overflow-x-hidden">
          <div className="w-full flex flex-shrink md:flex-nowrap  md:place-items-center md:justify-center" >
             <div className="w-1/2">
                 <p>Dashboard</p>
@@ -15,13 +17,13 @@ const DashBoardBodyContainer = () => {
             </div>
             <div className="w-1/2 flex flex-col place-items-center  md:flex-row flex-shrink  justify-center md:place-items-end md:justify-end gap-8 md:me-20 ">
                <div className="flex flex-shrink md:gap-5 place-items-center" >
-                <img src="/" />
+                <img src={filterIcon}/>
                 <p className="text-sm text-textLightColor">Filter</p>
                 <p>{'>'}</p>
                </div>
 
                <div className="flex gap-8 place-items-center" >
-                <img src="/" />
+                <img src={calendarIcon} />
                 <div>
                 <p className="text-[12px] font-bold text-textLightColor">Filter Period</p>
                 <p className="text-[12px] text-textLightColor">4 June 2024 - 4 July 2024</p>

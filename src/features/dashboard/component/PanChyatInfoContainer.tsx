@@ -10,7 +10,7 @@ const PanChyatInfo  = ({dashBoardActiveButton,makeButtonActive}:{dashBoardActive
     const [dropDown,setDrown] = useState<boolean>(false)
     return (
         <div className=''>
-        <div  className={`${(dashBoardActiveButton.panchyatInfo.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }  bg-gray-400 bg-opacity-20  p-3 md:p-2  flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
+        <div  className={`${(dashBoardActiveButton.panchyatInfo.isActive) && ' border-navBarActiveColor  text-navBarActiveColor  border-s-4 ' }   p-3 md:p-2  flex gap-6   rounded-sm`} onClick={()=>{
             makeButtonActive('panchyatInfo')
         }}>
             <img src={(dashBoardActiveButton.panchyatInfo.isActive)? activeInfoIcon:inActiveInfoIcon}/>

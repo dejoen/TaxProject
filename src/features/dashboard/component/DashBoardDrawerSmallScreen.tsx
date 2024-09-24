@@ -1,4 +1,4 @@
-import  { useRef }  from "react";
+
 import useDashBoardDrawerState from "../hooks/useDashBoardDrawerState";
 import logoIcon from '../../../assets/logoIcon.svg'
 import  activeDashboardIcon from '../../../assets/dashboardIcon/dashboardIcon.svg'
@@ -13,23 +13,24 @@ import MandalInformationContainer from './MandalInformationContainer';
 import PanChyatInfoContainer from './PanChyatInfoContainer';
 import PushNotificationContainer from './PushNotificationContainer';
 import useDashboardChangeStateHook from '../hooks/useDashboardChangeStateHook';
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const DashBoardDrawerSmallScreen = () => {
     
-  const dashBoardRef = useRef<HTMLDivElement > (null)
+  
     const {closeDrawer} = useDashBoardDrawerState()
     const path = useLocation()
     const pathName = path.pathname.split('/')[1]
    
     const {dashBoardActiveButton,makeButtonActive} =  useDashboardChangeStateHook(pathName)
 
+    const navigate = useNavigate()
 
 
  
     return (
-<div className={`DashBoardScreen  hidden flex-col md:hidden absolute w-[280px] h-dvh bg-white shadow-black shadow-lg  top-0 right-0 bottom-0 z-50`} ref={dashBoardRef}>
+<div className={`DashBoardScreen  hidden flex-col md:hidden absolute w-[280px] h-dvh bg-[#C4C4C4] shadow-black shadow-lg  top-0 right-0 bottom-0 z-50`} >
        
     <p className="m-3 font-bold text-2xl" onClick={()=>{
       
@@ -42,17 +43,18 @@ const DashBoardDrawerSmallScreen = () => {
     </div>
 
 
-    <div className=' w-full flex flex-col  text-sm font-poppins  gap-2'>
+    <div className='hidden w-full  flex-col  text-sm font-poppins  gap-2'>
 
         <div className={`${(dashBoardActiveButton.dashBoard.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }  bg-gray-400 bg-opacity-20  p-3  flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
      makeButtonActive('dashboard')
         }}>
             <img src={(dashBoardActiveButton.dashBoard.isActive)? activeDashboardIcon :inActiveDashboardIcon}/>
-            <p className=' '>Dashbord</p>
+            <p className=' '>Dashboard</p>
         </div>
 
         <div className={`${(dashBoardActiveButton.propertyList.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }  bg-gray-400 bg-opacity-20  p-3  flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
      makeButtonActive('propertyList')
+     navigate('/property-list')
         }}>
             <img src={(dashBoardActiveButton.propertyList.isActive)? activePropertyListIcon:inActivePropertyListIcon}/>
             <p ><span className={ `${(dashBoardActiveButton.propertyList.isActive) && 'text-navBarActiveColor'}`}>Property List</span > <span className= 'bg-primaryColor text-onPrimaryColor w-[32px] h-[32px] p-1 rounded-md'>25</span></p>

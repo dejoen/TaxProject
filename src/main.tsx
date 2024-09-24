@@ -6,6 +6,7 @@ import {createBrowserRouter,Navigate,RouterProvider} from 'react-router-dom'
 
 import MainPage from './features/dashboard/pages/MainPage.tsx'
 import DashBoard from './features/dashboard/pages/Dashboard.tsx'
+import PropertyList from './features/dashboard/pages/PropertyList.tsx'
 
 
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path:'dashboard',
         element:<DashBoard/>,
+      },
+      {
+        path:'property-list',
+        element:<PropertyList/>,
       }
     ]
   },

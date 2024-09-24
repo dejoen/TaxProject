@@ -1,5 +1,6 @@
 import PieChart from "../hooks/usePieChart";
 import ProgressBar from "../hooks/useProgressBar";
+import dotIcon from '../../../assets/dot.svg'
 
 const PropertiesDashboardContainer = ()  => {
    
@@ -17,7 +18,10 @@ const PropertiesDashboardContainer = ()  => {
         <div className="w-full p-3 bg-lightGreen flex">
             <div className="flex place-items-center gap-4 w-1/2">
             <p className="bg-darkGreen rounded-md w-fit text-white p-2">25</p>
-            <p>New <span className="w-[11px] h-[11px] bg-darkGreen "></span></p>
+            <div className="flex justify-center items-center gap-2">
+            <p>New <span className="w-[11px] h-[11px] bg-[url(`${}`)]"></span></p>
+            <img src={dotIcon}/>
+            </div>
             </div>
             <div className="w-1/2 flex place-items-center justify-end">
              <p className="text-primaryColor">Manage<span className="text-center">{' >'}</span></p>
@@ -41,7 +45,7 @@ const PropertiesDashboardContainer = ()  => {
          
         </div>
         <div className="p-3 mt-4 flex   w-full flex-wrap place-items-center justify-center">
-           <div className=" md:w-[30%] w-full flex justify-center place-content-center ">
+           <div className=" ms-10 md:w-[10%]  w-full flex justify-center place-content-center ">
             <PieChart/>
            </div>
            <div className="w-fit flex flex-col justify-center place-items-center gap-5">
