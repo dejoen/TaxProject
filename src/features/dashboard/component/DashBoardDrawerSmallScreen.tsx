@@ -30,7 +30,7 @@ const DashBoardDrawerSmallScreen = () => {
 
  
     return (
-<div className={`DashBoardScreen  hidden flex-col md:hidden absolute w-[280px] h-dvh bg-[#C4C4C4] shadow-black shadow-lg  top-0 right-0 bottom-0 z-50`} >
+<div className={`DashBoardScreen  hidden flex-col md:hidden absolute w-[280px] h-dvh  shadow-black shadow-lg  top-0 right-0 bottom-0 z-50`} >
        
     <p className="m-3 font-bold text-2xl" onClick={()=>{
       
