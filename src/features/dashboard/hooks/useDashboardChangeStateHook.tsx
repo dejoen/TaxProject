@@ -55,6 +55,58 @@ import { useState } from "react";
                         }
                 }
             
+                case 'property-list':
+                    return {
+                        dashBoard:{
+                            isActive:false
+                        },
+                        propertyList:{
+                            isActive:true
+                        },
+                        panchyatWise:{
+                            isActive:false
+                        },
+                        EmployeeInfo:{
+                            isActive:false
+                        },
+                        MandalInfo:{
+                            isActive:false
+                        },
+                        panchyatInfo:{
+                            isActive:false
+                        },
+                        pushNotification:{
+                            isActive:false
+                        }
+                }
+
+                
+                 
+                case 'grama-panchayati':
+                    return {
+                        dashBoard:{
+                            isActive:false
+                        },
+                        propertyList:{
+                            isActive:false
+                        },
+                        panchyatWise:{
+                            isActive:true
+                        },
+                        EmployeeInfo:{
+                            isActive:false
+                        },
+                        MandalInfo:{
+                            isActive:false
+                        },
+                        panchyatInfo:{
+                            isActive:false
+                        },
+                        pushNotification:{
+                            isActive:false
+                        }
+                }
+            
             default: 
                 return {
                     dashBoard:{

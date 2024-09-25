@@ -30,7 +30,7 @@ const DashBoardDrawerSmallScreen = () => {
 
  
     return (
-<div className={`DashBoardScreen  hidden flex-col md:hidden absolute w-[280px] h-dvh  shadow-black shadow-lg  top-0 right-0 bottom-0 z-50`} >
+<div className={`DashBoardScreen bg-white hidden flex-col md:hidden absolute w-[280px] h-dvh  shadow-black shadow-lg  top-0 right-0 bottom-0 z-50`} >
        
     <p className="m-3 font-bold text-2xl" onClick={()=>{
       
@@ -43,16 +43,18 @@ const DashBoardDrawerSmallScreen = () => {
     </div>
 
 
-    <div className='hidden w-full  flex-col  text-sm font-poppins  gap-2'>
+    <div className=' w-full  flex-col  text-sm font-poppins  gap-2'>
 
-        <div className={`${(dashBoardActiveButton.dashBoard.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }  bg-gray-400 bg-opacity-20  p-3  flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
+        <div className={`${(dashBoardActiveButton.dashBoard.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }    p-3  flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
      makeButtonActive('dashboard')
+     navigate('/dashboard')
+
         }}>
             <img src={(dashBoardActiveButton.dashBoard.isActive)? activeDashboardIcon :inActiveDashboardIcon}/>
             <p className=' '>Dashboard</p>
         </div>
 
-        <div className={`${(dashBoardActiveButton.propertyList.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }  bg-gray-400 bg-opacity-20  p-3  flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
+        <div className={`${(dashBoardActiveButton.propertyList.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }    p-3  flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
      makeButtonActive('propertyList')
      navigate('/property-list')
         }}>
@@ -61,8 +63,9 @@ const DashBoardDrawerSmallScreen = () => {
             
         </div>
 
-        <div className={`${(dashBoardActiveButton.panchyatWise.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }  bg-gray-400 bg-opacity-20  p-3 flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
+        <div className={`${(dashBoardActiveButton.panchyatWise.isActive) && ' border-navBarActiveColor  text-navBarActiveColor ' }   p-3 flex gap-6  border-s-4  rounded-sm`} onClick={()=>{
      makeButtonActive('panchyatWise')
+     navigate('/grama-panchayati')
         }}>
         <img src={(dashBoardActiveButton.panchyatWise.isActive)? activepanChyantIcon :inActivepanChyantIcon}/>
             <p className={ `${(dashBoardActiveButton.panchyatWise.isActive) && 'text-navBarActiveColor'}`}>Panchyat Wise</p>

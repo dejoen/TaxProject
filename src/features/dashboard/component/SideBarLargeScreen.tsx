@@ -51,6 +51,7 @@ const SideBarLargeScreen = () =>{
 
         <div className={`${(dashBoardActiveButton.panchyatWise.isActive) && ' border-navBarActiveColor  text-navBarActiveColor  border-s-4 ' }    p-2  flex gap-6   rounded-sm`} onClick={()=>{
      makeButtonActive('panchyatWise')
+     navigate('/grama-panchayati')
         }}>
         <img src={(dashBoardActiveButton.panchyatWise.isActive)? activepanChyantIcon :inActivepanChyantIcon}/>
             <p className={ `${(dashBoardActiveButton.panchyatWise.isActive) && 'text-navBarActiveColor'}`}>Panchyat Wise</p>

@@ -64,7 +64,7 @@ const NavBarSmallScreen = () =>{
          </div>
 
 
-         <div className="w-[350px] mx-auto  border  border-[#56778] rounded-[4px] bg-white p-2 flex">
+         <div className="w-[300px] mx-auto  border  border-[#56778] rounded-[4px] bg-white p-2 flex">
          <input className="w-[90%] outline-none" type="text" placeholder="search here" />
          <img className="place-self-end justify-self-end " src={searchIcon}/>
          </div>

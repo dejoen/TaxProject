@@ -17,7 +17,7 @@ const useTable = () => {
 
   const theme = createTheme({
     typography:{
-      fontFamily:'"Poppins",cursive'
+      fontFamily:'Poppins'
     }
   })
 
@@ -105,26 +105,36 @@ const useTable = () => {
     return (
       
       <div className='font-poppins'>
-        <ThemeProvider theme={theme}>
+        
+       
         <TableContainer component={Paper} sx={{fontFamily:'poppins'}} >
     <Table stickyHeader={true} sx={{ minWidth: 650,  [`& .${tableCellClasses.root}`]: {
-      borderBottom: "none"
+      borderBottom: "none",
+     
     } ,  }}   aria-label="simple table" >
-    <TableHead  >
-        <TableRow sx={{ borderBottom:1,borderBottomColor:'#969BA0'}}>
+       <ThemeProvider theme={theme}>
+       <TableHead  sx={{  backgroundColor:'green'}}>
+        <TableRow sx={{ [`& .${tableCellClasses.root}`]: {
+      borderBottom: 1,
+      borderBottomColor:'#E9ECFF'
+
+
+     
+    } , }}>
             <TableCell   align="center">
-                <div className='flex place-items-center gap-1'>
+                <div className=' flex place-items-center justify-center gap-1 text-black'>
                     <p>Assessment Number</p>
-                    <div className='flex flex-col gap-[1px]'>
+                    <div className=' w-[18px] md:w-fit flex flex-col gap-[1px] '>
                       <img src={tableIconUp}/>
                       <img src={tableIconDown}/>
                     </div>
+                    
                 </div>
             </TableCell >
             <TableCell  align="center" >
-                <div className='flex place-items-center justify-center gap-1'>
+                <div className='flex  place-items-center justify-center gap-1 text-black'>
                     <p>Date</p>
-                    <div className='flex flex-col gap-[1px]'>
+                    <div className='w-[18px] md:w-fit flex flex-col gap-[1px]'>
                       <img src={tableIconUp}/>
                       <img src={tableIconDown}/>
                     </div>
@@ -132,9 +142,9 @@ const useTable = () => {
             </TableCell>
 
             <TableCell align="center" >
-                <div className='flex place-items-center gap-1'>
+                <div className='flex place-items-center gap-1 text-black'>
                     <p>Full Name</p>
-                    <div className='flex flex-col gap-[1px]'>
+                    <div className='w-[18px] md:w-fit flex flex-col gap-[1px]'>
                       <img src={tableIconUp}/>
                       <img src={tableIconDown}/>
                     </div>
@@ -143,9 +153,9 @@ const useTable = () => {
 
             
             <TableCell align="center" >
-                <div className='flex place-items-center gap-1'>
+                <div className='flex place-items-center gap-1 text-black'>
                     <p>GramaPanchyat Name</p>
-                    <div className='flex flex-col gap-[1px]'>
+                    <div className=' w-[18px] md:w-fit flex flex-col gap-[1px]'>
                       <img src={tableIconUp}/>
                       <img src={tableIconDown}/>
                     </div>
@@ -153,9 +163,9 @@ const useTable = () => {
             </TableCell>
 
             <TableCell align="center" >
-                <div className='flex place-items-center gap-1'>
+                <div className='flex place-items-center gap-1 text-black'>
                     <p>Habitation Name</p>
-                    <div className='flex flex-col gap-[1px]'>
+                    <div className=' w-[18px] md:w-fit flex flex-col gap-[1px]'>
                       <img src={tableIconUp}/>
                       <img src={tableIconDown}/>
                     </div>
@@ -163,23 +173,24 @@ const useTable = () => {
             </TableCell>
 
             <TableCell align="center" >
-                <div className='flex place-items-center gap-1'>
+                <div className='flex place-items-center gap-1 text-black'>
                     <p>Task Amount</p>
-                    <div className='flex flex-col gap-[1px]'>
+                    <div className=' w-[18px] md:w-fit flex flex-col gap-[1px]'>
                       <img src={tableIconUp}/>
                       <img src={tableIconDown}/>
                     </div>
                 </div>
             </TableCell>
 
-            <TableCell align="center">
-                <div>
+            <TableCell align="center" >
+                <div className='text-black'>
                     <p>View</p>
                    
                 </div>
             </TableCell>
         </TableRow>
     </TableHead>
+       </ThemeProvider>
     <TableBody>
      {
         rows.map((row)=>(
@@ -217,7 +228,7 @@ const useTable = () => {
    
 
   </TableContainer>
-        </ThemeProvider>
+    
 
 
 
