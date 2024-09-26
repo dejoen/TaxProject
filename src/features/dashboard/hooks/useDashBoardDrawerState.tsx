@@ -67,7 +67,7 @@ const useDashBoardDrawerState = () =>{
     
     }
 
-    return {openDrawer,closeDrawer}
+    return {openDrawer,closeDrawer,drawerRef,setDrawerRef}
 
 }
 

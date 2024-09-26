@@ -8,6 +8,7 @@ import MainPage from './features/dashboard/pages/MainPage.tsx'
 import DashBoard from './features/dashboard/pages/Dashboard.tsx'
 import PropertyList from './features/dashboard/pages/PropertyList.tsx'
 import GramaPanchayatiWise from './features/dashboard/pages/GramaPanchayatiWise.tsx'
+import AddMewEmployee from './features/dashboard/pages/Employee/AddNewEmployee.tsx'
 
 
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path:'grama-panchayati',
         element:<GramaPanchayatiWise/>,
+      },
+      {
+        path:'add-new-employee',
+        element:<AddMewEmployee/>,
       }
     ]
   },

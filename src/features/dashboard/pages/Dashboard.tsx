@@ -4,8 +4,9 @@ import NavBarLargeScreen from "../component/NavBarLargeScreen";
 import NavBarSmallScreen from "../component/NavBarSmallScreen";
 
 const DashBoard =  () => {
+    
     return (
-     <div>
+     <div className=" bg-[#F9F9F9]">
     <NavBarSmallScreen/>
     <NavBarLargeScreen/>
     <DashBoardDrawerSmallScreen/>

@@ -3,11 +3,13 @@ import  activeEmployeeIcon from '../../../assets/employeeIcon/EmployeeActive.svg
 import  inActiveEmployeeIcon from '../../../assets/employeeIcon/EmployeeInActive.svg'
 
 import { DashboardButtonState } from '../hooks/useDashboardChangeStateHook';
+import { useNavigate } from 'react-router-dom';
 
 
 const EmployeeinfoContainer = ({dashBoardActiveButton,makeButtonActive}:{dashBoardActiveButton:DashboardButtonState,makeButtonActive:(buttonType:string)=>void}) =>{
     
     const [dropDown,setDrown] = useState<boolean>(false)
+    const navigate = useNavigate()
     return (
         <div className=''>
         <div className={`${(dashBoardActiveButton.EmployeeInfo.isActive) && ' border-navBarActiveColor  text-navBarActiveColor   border-s-4 ' }    p-3 md:p-2  flex gap-6  rounded-sm`} onClick={()=>{
@@ -21,7 +23,9 @@ const EmployeeinfoContainer = ({dashBoardActiveButton,makeButtonActive}:{dashBoa
         }}>{(dropDown && dashBoardActiveButton.EmployeeInfo.isActive)?'v':'>'}</p>
     </div>
       <div className={`${(dropDown&& dashBoardActiveButton.EmployeeInfo.isActive)? 'block':'hidden'} ms-14 mt-1 text-textLightColor text-[12px]`}>
-       <p>Add New</p>
+       <p onClick={()=>{
+         navigate('/add-new-employee')
+       }}>Add New</p>
        <p>Employee List</p>
        <p>Remove Employee</p>
       </div>

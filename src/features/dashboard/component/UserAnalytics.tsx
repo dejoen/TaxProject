@@ -3,7 +3,7 @@ import ProgressBar from "../hooks/useProgressBar";
 const UserAnalytics = () => {
 
     return (
-        <div className="font-poppins   bg-white w-full md:w-[500px] rounded-md p-3 shadow-black shadow-md ">
+        <div className="font-poppins  h-fit   bg-white w-full md:w-[500px] rounded-md p-3 shadow-black shadow-md ">
         <div className=" w-full flex place-items-center justify-evenly p-3">
             <p className="md:w-1/2 font-bold">User Analytics</p>
             <div className="md:w-1/2 flex text-sm gap-4 bg-backgroundGrayColor rounded-lg p-1">
@@ -45,7 +45,7 @@ const UserAnalytics = () => {
 
             
 
-            <div  className="w-full flex gap-3 justify-center place-items-center">
+            <div  className="w-full flex gap-3 justify-center place-items-center mb-3">
                 <p className="text-textLightColor text-xs w-[80px]">In Active</p>
                <ProgressBar  value={7} color="#027402"/>
             <p className="text-textLightColor text-xs   w-[40px]">7%</p>

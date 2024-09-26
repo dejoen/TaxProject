@@ -1,6 +1,8 @@
 import filterIcon from '../../../assets/filterIcon.svg'
+import  GramaPanchayatiWiseTable from '../hooks/useGramaPanchayatiWiseTable';
 
 const GramaPanchayatiWiseContainer  = () => {
+
     
   return (
 
@@ -17,6 +19,8 @@ const GramaPanchayatiWiseContainer  = () => {
           </div>
          </div>
          </div> 
+           
+           <GramaPanchayatiWiseTable/>
          </div>
     
   );

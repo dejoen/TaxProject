@@ -3,6 +3,7 @@ import GramaPanchayatiWiseContainer from "../component/GramaPanchayatiWiseContai
 import NavBarLargeScreen from "../component/NavBarLargeScreen";
 import NavBarSmallScreen from "../component/NavBarSmallScreen";
 
+
 const GramaPanchayatiWise = () => {
 
     return  <div>
@@ -10,6 +11,7 @@ const GramaPanchayatiWise = () => {
     <NavBarLargeScreen/>
     <DashBoardDrawerSmallScreen/>
     <GramaPanchayatiWiseContainer/>
+    
     </div>
 }
 

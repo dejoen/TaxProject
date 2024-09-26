@@ -9,8 +9,8 @@ import calendarIcon from '../../../assets/calendarIcon.svg'
 const DashBoardBodyContainer = () => {
      const cardContents = useDashBoardCardContentState()
     return (
-     <div className="w-full h-fit flex  flex-col  p-3 font-poppins bg-[#C4C4C4] bg-opacity-5 overflow-y-auto overflow-x-hidden">
-         <div className="w-full flex flex-shrink md:flex-nowrap  md:place-items-center md:justify-center" >
+     <div className="w-full h-fit flex  ms-8 flex-col  ps-3 font-poppins  bg-opacity-5 overflow-y-auto overflow-x-hidden ">
+         <div className="w-full    flex flex-shrink md:flex-nowrap  md:place-items-center md:justify-center mt-2" >
             <div className="w-1/2">
                 <p>Dashboard</p>
                 <p className="text-sm text-textLightColor">Welcome Admin!</p>
@@ -32,14 +32,14 @@ const DashBoardBodyContainer = () => {
                </div>
             </div>
          </div>
-         <div className="m-10 flex place-items-center justify-center flex-wrap gap-10">
+         <div className="w-full mt-10    flex flex-shrink md:flex-nowrap  md:place-items-center md:justify-start gap-11">
           {
             cardContents.map((cardContent,index)=>(
                 <DashBoardCard key={index} cardContentHeader={cardContent.cardContentHeader} cardContentBody={cardContent.cardContentBody} cardContentImage={cardContent.cardContentImage}/>
             ))
           }
          </div>
-         <div className="w-full md:m-3 flex gap-5 h-full  justify-center flex-wrap ">
+         <div className="w-full  flex  h-full mt-8  flex-wrap  gap-8 mb-5 ">
            <PropertiesDashboardContainer/>
           <UserAnalytics/>
          </div>

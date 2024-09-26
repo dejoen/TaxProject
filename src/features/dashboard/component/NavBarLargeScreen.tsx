@@ -7,8 +7,8 @@
 
 const NavBarLargeScreen = () =>{
     return (
-        <div className=" hidden md:flex font-poppins w-full p-4  bg-white shadow-sm flex-wrap-reverse place-items-center justify-center  gap-8">
-         <div className="w-[350px] ms-10 border  border-[#56778] rounded-[4px] p-2 flex">
+        <div className=" hidden md:flex font-poppins w-full p-4  ms-5  bg-white shadow-sm flex-wrap-reverse place-items-center   gap-8">
+         <div className="w-[350px] border  border-[#56778] rounded-[4px] p-2 flex">
          <input className="w-[90%] outline-none" type="text" placeholder="search here" />
          <img className="place-self-end justify-self-end " src={searchIcon}/>
          </div>
