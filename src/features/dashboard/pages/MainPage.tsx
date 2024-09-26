@@ -21,7 +21,7 @@ const MainPage = () => {
        }
     },[drawerRef])
     return (
-        <div className="w-full min-h-[100vh] overflow-y-hidden flex">
+        <div className="w-full min-h-[100vh] overflow-hidden flex">
           <SideBarLargeScreen/>
            <MainBodyContainer/>
            

@@ -8,7 +8,7 @@ import PropertyListBodyContainer from "../component/PropertyListBodyContainer";
 const PropertyList = () =>  {
 
     return (
-  <div className="overflow-hidden">
+  <div className="overflow-hidden  bg-[#F9F9F9]">
      <NavBarSmallScreen/>
     <NavBarLargeScreen/>
     <DashBoardDrawerSmallScreen/>

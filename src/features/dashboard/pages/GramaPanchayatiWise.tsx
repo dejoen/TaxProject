@@ -6,7 +6,7 @@ import NavBarSmallScreen from "../component/NavBarSmallScreen";
 
 const GramaPanchayatiWise = () => {
 
-    return  <div>
+    return  <div className="bg-[#F9F9F9]">
     <NavBarSmallScreen/>
     <NavBarLargeScreen/>
     <DashBoardDrawerSmallScreen/>

@@ -6,7 +6,7 @@ const GramaPanchayatiWiseContainer  = () => {
     
   return (
 
-    <div className="w-full h-dvh flex  flex-col  p-3 font-poppins bg-[#C4C4C4] bg-opacity-5 overflow-y-auto overflow-x-hidden">
+    <div className="w-full h-dvh flex  flex-col  p-3 font-poppins  bg-opacity-5 overflow-y-auto overflow-x-hidden">
     <div className="w-full flex flex-shrink md:flex-nowrap  md:place-items-center md:justify-center m-3 p-4 " >
        <div className="w-1/2 mt-1 md:mt-0">
            <p>Grama Panchayati Wise</p>

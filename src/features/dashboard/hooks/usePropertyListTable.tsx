@@ -104,7 +104,7 @@ const useTable = () => {
 
     return (
       
-      <div className='font-poppins'>
+      <div className='font-poppins ms-6 me-10'>
         
        
         <TableContainer component={Paper} sx={{fontFamily:'poppins'}} >

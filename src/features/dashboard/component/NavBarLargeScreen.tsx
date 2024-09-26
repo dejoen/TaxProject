@@ -7,16 +7,21 @@
 
 const NavBarLargeScreen = () =>{
     return (
-        <div className=" hidden md:flex font-poppins w-full p-4  ms-5  bg-white shadow-sm flex-wrap-reverse place-items-center   gap-8">
-         <div className="w-[350px] border  border-[#56778] rounded-[4px] p-2 flex">
+        <div className=" hidden md:flex font-poppins w-[98%] lg:w-full  p-4  ms-5  bg-white shadow-sm flex-wrap-reverse place-items-center   gap-8">
+
+         <div className="w-[350px] border  border-[#56778] rounded-[4px] p-2 flex flex-wrap">
          <input className="w-[90%] outline-none" type="text" placeholder="search here" />
          <img className="place-self-end justify-self-end " src={searchIcon}/>
          </div>
+
          <div className="flex gap-3 text-[14px] text-textLightColor ms-6 cursor-default"> 
             <p className='hover:text-primaryColor hover:underline'>About</p>
             <p className='hover:text-primaryColor hover:underline'>Tools</p>
             <p className='hover:text-primaryColor hover:underline'>Help</p>
          </div>
+
+
+
          <div className="flex">
           <div className="relative">
             <p className="absolute bg-primaryColor right-[-9px] bottom-7 w-[22px] h-[22px] rounded-full z-5 flex place-items-center justify-center text-white text-sm">21</p>
@@ -26,6 +31,7 @@ const NavBarLargeScreen = () =>{
           </div>
 
           </div>
+
           <div className="relative">
             <p className="absolute bg-primaryColor right-[-9px] bottom-7 w-[22px] h-[22px] rounded-full z-5 flex place-items-center justify-center text-white text-sm">21</p>
          
@@ -43,6 +49,7 @@ const NavBarLargeScreen = () =>{
           </div>
           </div>
           <div>
+
             <div className="relative bg-primaryColor text-white p-1 rounded-md ms-20 pe-6 ">
                <img className="absolute right-[-20px] top-[-3px]  w-[40px]" src={roundIcon}/>
                 <p className='text-wrap'>Hello, Harikrishna </p>
